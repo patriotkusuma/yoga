@@ -80,7 +80,7 @@ body {
         $login = mysqli_fetch_object($query);
 
 
-        if ($username == $login->username && password_verify($password, $login->password)) {
+        if ($username == $login->username && $password == $login->password) {
             $_SESSION['logged'] = 1;
             $_SESSION['username'] = $login->username;
             header('index.php');
