@@ -79,6 +79,7 @@ body {
         $query = mysqli_query($db, $sql);
         $login = mysqli_fetch_object($query);
 
+        var_dump($username .' ' .$password.' '.$login);
 
         if ($username == $login->username && $password == $login->password) {
             $_SESSION['logged'] = 1;
