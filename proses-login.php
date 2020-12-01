@@ -9,8 +9,6 @@ $sql = "SELECT * FROM `login` WHERE username = '$username'";
 $query = mysqli_query($koneksi, $sql);
 $login = mysqli_fetch_object($query);
 
-var_dump($username .' ' .$password.' '.$login->password);
-die();
 if ($login != NULL) {
 
     if ($username == $login->username && $password == $login->password) {
