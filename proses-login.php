@@ -6,10 +6,10 @@ $time = time();
 $check = isset($_POST['remember-me']) ? $_POST['remember-me'] : '';
 
 $sql = "SELECT * FROM `login` WHERE username = '$username'";
-$query = mysqli_query($db, $sql);
+$query = mysqli_query($koneksi, $sql);
 $login = mysqli_fetch_object($query);
 
-var_dump($username .' ' .$password.' '.$login);
+var_dump($username .' ' .$password.' '.$login->password);
 die();
 if ($login != NULL) {
 
